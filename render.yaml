@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: pentest-telegram-ai
+    env: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: TELEGRAM_TOKEN
+        generateValue: true
+        required: true
+      - key: SHODAN_API_KEY
+        generateValue: false
+        required: false
+      - key: ADMIN_CHAT_ID
+        generateValue: false
+        required: false
+    plan: starter
