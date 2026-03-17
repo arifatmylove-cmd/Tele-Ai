@@ -15,12 +15,12 @@ logger = logging.getLogger(__name__)
 
 class PentestBot:
     def __init__(self):
-        self.token = os.getenv('TELEGRAM_TOKEN')
+        self.token = os.getenv('8782559806:AAE60OpeyRho6qIse6b0S6jCRwy4GwygqMo')
         if not self.token:
             raise ValueError("TELEGRAM_TOKEN not set")
         
-        self.shodan_key = os.getenv('SHODAN_API_KEY', '')
-        self.admin_chat_id = int(os.getenv('ADMIN_CHAT_ID', '0'))
+        self.shodan_key = os.getenv('zo4d2hU2WEGplctQIfTK2xhIOkd0hteJ', '')
+        self.admin_chat_id = int(os.getenv('8791892554', '0'))
         self.shodan = ShodanClient(self.shodan_key)
         self.pentest = PentestTools()
         self.user_sessions = {}
